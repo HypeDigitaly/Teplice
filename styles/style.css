@@ -1,5 +1,5 @@
 .voiceflow-chat {
-  box-shadow: #000000;
+  box-shadow: #FDCA40;
 }
 
 .vfrc-widget--chat {
@@ -23,7 +23,7 @@
   width: 72px;
   height: 72px;
   background-color: rgb(255 255 255);
-  border: #000000 1px solid;
+  border: #FDCA40 1px solid;
 }
 
 /* picture avatar small */
@@ -68,11 +68,11 @@
 }
 
 .c-bXTvXv-lckiv-type-info {
-  background-color: #000000;
+  background-color: #FDCA40;
 }
 
 .c-bXTvXv-lckiv-type-info:hover {
-  background-color: #161616;
+  background-color: #FDCA40;
 }
 
 .vfrc-message {
@@ -94,11 +94,10 @@
   margin-left: -1px;
 }
 
-/* Updated text input styling with vertical alignment and padding */
 .vfrc-chat-input textarea {
   text-align: left;
   font-size: 16px;
-  color: #000000;
+  color: #FDCA40;
   padding-left: 15px;
   display: flex;
   align-items: center;
@@ -107,7 +106,7 @@
 
 .vfrc-button--secondary {
   display: inline-block;
-  border: 1px solid #000000;
+  border: 1px solid #FDCA40;
   font-size: 16px;
   font-weight: 500;
   border-radius: 20px;
@@ -130,22 +129,24 @@
 
 .vfrc-header--title {
   color: #fffffffa;
-  font-size: 18px;  /* Updated: Increased by 2px */
+  font-size: 18px;
 }
 
-.vfrc-launcher img {
+/* Updated launcher image styles based on HTML */
+.vfrc-launcher.c-bQoszF {
   width: 72px;
   height: 72px;
   border-radius: 40px;
 }
 
 .vfrc-proactive-message {
-  border: rgb(0, 0, 0) 1px solid;
+  border: #FDCA40 1px solid;
   text-align: left !important;
   font-weight: 700;
 }
 
-.vfrc-launcher {
+/* Updated launcher styles based on HTML class */
+.vfrc-launcher.c-bQoszF {
   width: 75px;
   height: 75px;
   border: none;
@@ -154,14 +155,14 @@
   background-size: cover !important;
   background-position: center !important;
   border: transparent;
-  background-color: #ffffff !important;  /* Updated: Changed to white background */
+  background-color: #ffffff !important;
   box-shadow: none;
-  border-radius: 50%;  /* Added for circular shape */
+  border-radius: 50%;
 }
 
 .vfrc-launcher:hover {
   transform: scale(1.1);
-  opacity: 0.8; 
+  opacity: 0.8;
   background-color: white;
 }
 
@@ -176,7 +177,8 @@
   }
 }
 
-.vfrc-header--button:nth-of-type(1) .vfrc-icon {
+/* Updated header button styles */
+.vfrc-header--button .vfrc-icon {
   width: 24px !important;
   height: 24px !important;
 }
@@ -189,79 +191,67 @@
   margin: 0px !important;
 }
 
-.vfrc-header--button:nth-of-type(2) .vfrc-icon {
-  width: 24px !important;
-  height: 24px !important;
-}
-
-.vfrc-launcher:hover {
-  background-color: none;
-}
-
-/* text footer mark - Updated size and weight */
 .c-cejRVw {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px 0 var(--space-3) 0;
-  font-size: 15px;  /* Updated: Increased by 3px */
-  font-weight: 700;  /* Updated: Changed to bold */
+  font-size: 15px;
+  font-weight: 700;
   line-height: 17px;
-  color: #000000;
+  color: #FDCA40;
 }
 
-/* color footer mark/ your brand/ */
 .c-cejRVw a {
-  color: #000000;
+  color: #FDCA40;
 }
 
 .vfrc-footer--watermark {
-  color: #000000;
+  color: #FDCA40;
 }
 
-/* color header/ change here */
 .vfrc-header {
-  background-color: #000000;
+  background-color: #FDCA40;
   height: 66px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
 
-/* color of the name of the agent/ change here */
 .vfrc-assistant-info--title {
-  color: #000000;
+  color: #FDCA40;
 }
 
-/* cancel chat color */
 .c-bXTvXv-igaDqE-type-subtle {
-  background-color: #000000;
+  background-color: #FDCA40;
   color: #ffffff;
 }
 
-.c-bXTvXv-igaDqE-type-subtle:hover {
-  color: #ffffff;
-}
-
-/* Base AI message styling */
 .c-PJLV-jueArD-from-system {
   text-align: left !important;
   font-size: 16px;
 }
 
-/* Base user message styling */
 .c-PJLV-gJqBfM-from-user {
-  background-color: #000000;
+  background-color: #FDCA40;
   color: #ffffff;
   text-align: left !important;
   font-size: 16px;
 }
 
-.vfrc-proactive-message {
-  border: rgb(0, 0, 0) 1px solid;
-  text-align: left !important;
+@keyframes cxARAE {
+  0% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 
-/* Mobile-only styles */
+/* Mobile styles */
+@media (max-width: 767px) {
+  /* Mobile styles with complete media query conditions */
 @media (max-width: 767px) and (any-pointer: coarse) and (any-hover: none), 
        (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2),
        (max-width: 767px) and (min-resolution: 192dpi) {
@@ -270,7 +260,6 @@
     padding: 5px 8px !important;
   }
 
-  /* Updated header caption size for mobile */
   .vfrc-assistant-info--title {
     font-size: 13px;
   }
@@ -279,7 +268,6 @@
     font-size: 11px;
   }
 
-  /* Mobile-specific AI message styling */
   .c-PJLV-jueArD-from-system {
     width: 125% !important;
     max-width: 125% !important;
@@ -290,73 +278,11 @@
   .vfrc-button--secondary {
     font-size: 13px;
     margin-left: 10px !important;
-    margin-right: -3px !important;  /* Added for closer button spacing */
-  }
-
-  .vfrc-header--title {
-    font-size: 13px;  /* Updated proportionally */
-  }
-
-  .c-cejRVw {
-    font-size: 11px;  /* Updated proportionally */
-    font-weight: 700;  /* Keeping bold in mobile */
-  }
-
-  .vfrc-assistant-info--description {
-    font-size: 11px;
-  }
-
-  /* Mobile user input styling */
-  .vfrc-chat-input textarea,
-  .vfrc-chat-input textarea:focus,
-  .vfrc-chat-input textarea:active,
-  .vfrc-chat-input textarea:focus-visible {
-    font-size: 13px !important;
-    text-align: left !important;
-    -webkit-text-size-adjust: none;
-    padding-left: 15px;
-  }
-
-  .vfrc-chat-input--button {
-    font-size: 11px;
-  }
-  
-  /* Mobile user message styling */
-  .c-PJLV-gJqBfM-from-user {
-    font-size: 13px !important;
+    margin-right: -3px !important;
   }
 }
 
-/* iOS-specific fixes */
-@supports (-webkit-touch-callout: none) {
-  @media (max-width: 767px) {
-    .c-PJLV-jueArD-from-system {
-      width: 125% !important;
-      max-width: 125% !important;
-      margin-right: -25% !important;
-    }
-
-    .vfrc-chat-input textarea,
-    .vfrc-chat-input textarea:focus,
-    .vfrc-chat-input textarea:active,
-    .vfrc-chat-input textarea:focus-visible {
-      font-size: 13px !important;
-      text-align: left !important;
-      -webkit-text-size-adjust: none;
-      padding-left: 15px;
-    }
-
-    .c-PJLV-gJqBfM-from-user {
-      font-size: 13px !important;
-    }
-
-    .vfrc-button--secondary {
-      margin-left: 10px !important;
-      margin-right: -3px !important;  /* Added for closer button spacing */
-    }
-  }
-}
-
+/* iOS specific fixes remain the same but with updated selectors */
 /* Additional mobile detection for older devices */
 @media only screen and (max-device-width: 767px),
        only screen and (max-device-height: 767px) and (orientation: landscape) {
@@ -382,7 +308,17 @@
 
   .vfrc-button--secondary {
     margin-left: 10px !important;
-    margin-right: -3px !important;  /* Added for closer button spacing */
+    margin-right: -3px !important;
+  }
+}
+
+@supports (-webkit-touch-callout: none) {
+  @media (max-width: 767px) {
+    .c-PJLV-jueArD-from-system {
+      width: 125% !important;
+      max-width: 125% !important;
+      margin-right: -25% !important;
+    }
   }
 }
 
