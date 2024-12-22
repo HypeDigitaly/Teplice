@@ -138,10 +138,16 @@
   font-weight: 700;
 }
 
+.vfrc-launcher img {
+  width: 72px;
+  height: 72px;
+  border-radius: 40px;
+}
+
 /* Launcher styling - Updated size */
 .vfrc-launcher.c-bQoszF {
-  width: 150px;
-  height: 150px;
+  width: 72px;
+  height: 72px;
   border-radius: 50%;
   border: none;
   animation: fadeIn 0.5s ease-in-out;
