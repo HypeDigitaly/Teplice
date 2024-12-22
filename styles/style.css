@@ -8,10 +8,12 @@
 
 .vfrc-assistant-info--title {
   font-size: 20px;
+  color: #FDCA40;
 }
 
 .vfrc-assistant-info--description {
   color: rgb(17, 24, 28);
+  -webkit-box-orient: horizontal;
 }
 
 .vfrc-icon.c-dhzjXW-iPJLV-css {
@@ -26,7 +28,7 @@
   border: #FDCA40 1px solid;
 }
 
-/* picture avatar small */
+/* Small avatar - Updated size */
 .c-kIbiaN-iiTsXc-size-small.c-kIbiaN-idKkWhV-css {
   width: 55px;
   height: 55px;
@@ -63,30 +65,7 @@
   border: 1px solid #ccc;
 }
 
-.vfrc-assistant-info--description {
-  -webkit-box-orient: horizontal;
-}
-
-.c-bXTvXv-lckiv-type-info {
-  background-color: #FDCA40;
-}
-
-.c-bXTvXv-lckiv-type-info:hover {
-  background-color: #FDCA40;
-}
-
-.vfrc-message {
-  font-weight: 400;
-  border-radius: 20px;
-  font-size: 16px;
-}
-
-.c-fYYkXN {
-  border-top-left-radius: 20px !important;
-  border-bottom-left-radius: 20px !important;
-  border: 1px solid #ccc;
-}
-
+/* Input styling */
 .vfrc-chat-input--button {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -103,6 +82,7 @@
   vertical-align: middle;
 }
 
+/* Button styling */
 .vfrc-button--secondary {
   display: inline-block;
   border: 1px solid #FDCA40;
@@ -126,36 +106,50 @@
   border-color: rgba(0, 24, 39, 0.7);
 }
 
+/* Message styles */
+.vfrc-message {
+  font-weight: 400;
+  border-radius: 20px;
+  font-size: 16px;
+}
+
+.c-fYYkXN {
+  border-top-left-radius: 20px !important;
+  border-bottom-left-radius: 20px !important;
+  border: 1px solid #ccc;
+}
+
+/* Header styling */
+.vfrc-header {
+  background-color: #FDCA40;
+  height: 66px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
 .vfrc-header--title {
   color: #fffffffa;
   font-size: 18px;
 }
 
-/* Updated launcher image styles based on HTML */
-.vfrc-launcher.c-bQoszF {
-  width: 100px;
-  height: 100px;
-  border-radius: 40px;
-}
-
+/* Proactive message */
 .vfrc-proactive-message {
   text-align: left !important;
   font-weight: 700;
 }
 
-/* Updated launcher styles based on HTML class */
+/* Launcher styling - Updated size */
 .vfrc-launcher.c-bQoszF {
   width: 100px;
   height: 100px;
+  border-radius: 50%;
   border: none;
   animation: fadeIn 0.5s ease-in-out;
   transition: transform 150ms ease 0s !important;
   background-size: cover !important;
   background-position: center !important;
-  border: transparent;
   background-color: #ffffff !important;
   box-shadow: none;
-  border-radius: 50%;
 }
 
 .vfrc-launcher:hover {
@@ -164,31 +158,7 @@
   background-color: white;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Updated header button styles */
-.vfrc-header--button .vfrc-icon {
-  width: 24px !important;
-  height: 24px !important;
-}
-
-.c-kDxFae > .c-bwlaNm, .c-kDxFae > .c-gSBsRr {
-  padding-left: 5px;
-}
-
-.c-gSBsRr .c-kIbiaN {
-  margin: 0px !important;
-}
-
+/* Footer styling */
 .c-cejRVw {
   display: flex;
   justify-content: center;
@@ -208,15 +178,13 @@
   color: #FDCA40;
 }
 
-.vfrc-header {
+/* Message type styles */
+.c-bXTvXv-lckiv-type-info {
   background-color: #FDCA40;
-  height: 66px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
 }
 
-.vfrc-assistant-info--title {
-  color: #FDCA40;
+.c-bXTvXv-lckiv-type-info:hover {
+  background-color: #FDCA40;
 }
 
 .c-bXTvXv-igaDqE-type-subtle {
@@ -236,6 +204,28 @@
   font-size: 16px;
 }
 
+/* Layout adjustments */
+.c-kDxFae > .c-bwlaNm, 
+.c-kDxFae > .c-gSBsRr {
+  padding-left: 5px;
+}
+
+.c-gSBsRr .c-kIbiaN {
+  margin: 0px !important;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @keyframes cxARAE {
   0% {
     opacity: 0;
@@ -248,8 +238,6 @@
 }
 
 /* Mobile styles */
-@media (max-width: 767px) {
-  /* Mobile styles with complete media query conditions */
 @media (max-width: 767px) and (any-pointer: coarse) and (any-hover: none), 
        (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2),
        (max-width: 767px) and (min-resolution: 192dpi) {
@@ -280,8 +268,7 @@
   }
 }
 
-/* iOS specific fixes remain the same but with updated selectors */
-/* Additional mobile detection for older devices */
+/* iOS specific fixes */
 @media only screen and (max-device-width: 767px),
        only screen and (max-device-height: 767px) and (orientation: landscape) {
   .c-PJLV-jueArD-from-system {
@@ -310,6 +297,7 @@
   }
 }
 
+/* iOS specific adjustments */
 @supports (-webkit-touch-callout: none) {
   @media (max-width: 767px) {
     .c-PJLV-jueArD-from-system {
@@ -320,6 +308,7 @@
   }
 }
 
+/* Desktop styles */
 @media screen and (min-width: 768px) {
   .vfrc-widget--chat {
     border-radius: 20px;
