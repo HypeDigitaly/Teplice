@@ -2,8 +2,10 @@
   box-shadow: #FDCA40;
 }
 
+/* Base widget styles */
 .vfrc-widget--chat {
   animation: fadeInChat 1s ease-out;
+  height: 100%;
 }
 
 .vfrc-assistant-info--title {
@@ -21,21 +23,23 @@
   height: 24px;
 }
 
+/* Large avatar - Increased border radius */
 .c-kIbiaN-eyfkxi-size-large {
   width: 72px;
   height: 72px;
   background-color: rgb(255 255 255);
   border: #FDCA40 1px solid;
+  border-radius: 30px;
 }
 
-/* Small avatar - Updated size */
+/* Small avatar */
 .c-kIbiaN-iiTsXc-size-small.c-kIbiaN-idKkWhV-css {
   width: 45px;
   height: 45px;
   background-size: cover !important;
   background-position: center !important;
   background-color: #ffffff;
-  border-radius: 20px;
+  border-radius: 30px;
 }
 
 .c-dzcdPv .vfrc-header--button {
@@ -59,6 +63,7 @@
   opacity: 0;
   transform: translateY(16px);
   animation: 400ms ease-out 150ms 1 normal forwards running cxARAE;
+  height: calc(100% - 66px);
 }
 
 .c-fYYkXN {
@@ -144,7 +149,7 @@
   border-radius: 80px;
 }
 
-/* Launcher styling - Updated size */
+/* Launcher styling */
 .vfrc-launcher.c-bQoszF {
   width: 175px;
   height: 175px;
@@ -314,9 +319,11 @@
   }
 }
 
-/* Desktop styles */
+/* Desktop styles with increased height */
 @media screen and (min-width: 768px) {
   .vfrc-widget--chat {
     border-radius: 20px;
+    height: 130%;
+    max-height: calc(100vh - 40px);
   }
 }
