@@ -248,7 +248,7 @@
        (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2),
        (max-width: 767px) and (min-resolution: 192dpi) {
   .vfrc-proactive-message {
-    font-size: 10px;
+    font-size: 12px;
     padding: 5px 8px !important;
   }
 
