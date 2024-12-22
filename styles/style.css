@@ -253,22 +253,22 @@
   }
 
   .vfrc-assistant-info--title {
-    font-size: 13px;
+    font-size: 16px;
   }
 
   .vfrc-message {
-    font-size: 11px;
+    font-size: 16px;
   }
 
   .c-PJLV-jueArD-from-system {
     width: 125% !important;
     max-width: 125% !important;
     margin-right: -25% !important;
-    font-size: 13px;
+    font-size: 16px;
   }
 
   .vfrc-button--secondary {
-    font-size: 13px;
+    font-size: 16px;
     margin-left: 10px !important;
     margin-right: -3px !important;
   }
@@ -287,14 +287,14 @@
   .vfrc-chat-input textarea:focus,
   .vfrc-chat-input textarea:active,
   .vfrc-chat-input textarea:focus-visible {
-    font-size: 15px !important;
+    font-size: 16px !important;
     text-align: left !important;
     -webkit-text-size-adjust: none;
     padding-left: 15px;
   }
 
   .c-PJLV-gJqBfM-from-user {
-    font-size: 13px !important;
+    font-size: 16px !important;
   }
 
   .vfrc-button--secondary {
