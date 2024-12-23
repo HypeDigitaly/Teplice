@@ -26,10 +26,10 @@
   border: #000000 1px solid;
 }
 
-/* Updated header avatar size */
+/* Fixed header avatar size */
 .c-iCDrnV .c-kIbiaN {
-  width: 160px;
-  height: 200px;
+  width: 48px;
+  height: 48px;
   background-color: #ed143d00;
 }
 
@@ -40,7 +40,7 @@
   object-fit: cover !important;
 }
 
-/* Avatar small size update */
+/* Conversation avatar size */
 .c-kIbiaN-iiTsXc-size-small.c-kIbiaN-icGAGGr-css {
   width: 50px !important;
   height: 50px !important;
@@ -180,10 +180,10 @@
   border-color: rgba(0, 43, 69, 0.7);
 }
 
-/* Actions container for vertical layout */
+/* Fixed button alignment */
 .vfrc-system-response--actions.c-iBV1vN,
 .vfrc-system-response--actions {
-  padding-left: 60px !important;
+  padding-left: 5px !important;
   margin-left: 0 !important;
   display: flex !important;
   flex-direction: column !important;
