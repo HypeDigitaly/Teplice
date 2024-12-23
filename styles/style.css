@@ -130,6 +130,7 @@
   border-radius: 20px;
   padding: 9px 13px;
   margin: 0px;
+  margin-left: 5px;
   box-sizing: border-box;
   background-color: transparent;
   color: #002b45;
@@ -194,7 +195,7 @@
 }
 
 .c-kDxFae > .c-bwlaNm, .c-kDxFae > .c-gSBsRr {
-  padding-left: 5px;
+  padding-left: 0px;
 }
 
 .c-gSBsRr .c-kIbiaN {
@@ -219,17 +220,28 @@
   font-size: 12px;
   font-weight: 700;
   line-height: 17px;
-  color: #FDCA40;
+  color: #FDCA40 !important;
+}
+
+.c-cejRNw * {
+  color: #FDCA40 !important;
+  font-weight: 700 !important;
 }
 
 .c-cejRNw a {
-  color: #FDCA40;
-  font-weight: 700;
+  color: #FDCA40 !important;
+  font-weight: 700 !important;
+  text-decoration: none;
 }
 
 .vfrc-footer--watermark {
   color: #FDCA40 !important;
-  font-weight: 700;
+  font-weight: 700 !important;
+}
+
+.vfrc-footer--watermark * {
+  color: #FDCA40 !important;
+  font-weight: 700 !important;
 }
 
 .vfrc-header.c-iCDrnV {
