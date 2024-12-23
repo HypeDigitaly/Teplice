@@ -143,7 +143,7 @@
 /* Updated button styles with font size and wrapping fixes */
 .vfrc-button--secondary {
   display: block !important;
-  width: fit-content !important;
+  width: 100% !important;
   max-width: 100% !important;
   border: 1px solid #FDCA40;
   font-size: 13px;
@@ -151,8 +151,8 @@
   border-radius: 20px;
   padding: 9px 13px;
   margin: 0px;
-  margin-bottom: 0px !important;
-  box-sizing: border-box;
+  margin-bottom: 8px !important;
+  box-sizing: border-box !important;
   background-color: transparent;
   color: #002b45;
   cursor: pointer;
@@ -160,11 +160,12 @@
     border-color 100ms ease-in-out 0s;
   white-space: normal !important;
   text-align: left;
-  flex: 0 0 auto !important;
   float: none !important;
   clear: both !important;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  min-width: 0 !important;
+  flex: 1 1 auto !important;
 }
 
 .vfrc-button--secondary:hover {
@@ -176,13 +177,17 @@
 .vfrc-system-response--actions.c-iBV1vN,
 .vfrc-system-response--actions {
   padding-left: 60px !important;
+  padding-right: 60px !important;
   margin-left: 0 !important;
+  margin-right: 0 !important;
   display: flex !important;
   flex-direction: column !important;
   gap: 0px !important;
-  align-items: flex-start !important;
-  width: 100% !important;
+  align-items: stretch !important;
+  width: auto !important;
+  max-width: 100% !important;
   flex-wrap: nowrap !important;
+  box-sizing: border-box !important;
 }
 
 .vfrc-header--title.c-kfyIxT {
