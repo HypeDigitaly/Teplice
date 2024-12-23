@@ -122,6 +122,7 @@
   margin-left: -1px;
 }
 
+/* Updated button styles for vertical layout */
 .vfrc-button--secondary {
   display: inline-block;
   border: 1px solid #FDCA40;
@@ -130,7 +131,8 @@
   border-radius: 20px;
   padding: 9px 13px;
   margin: 0px;
-  margin-left: 5px;
+  margin-bottom: 8px !important;
+  width: calc(100% - 60px) !important;
   box-sizing: border-box;
   background-color: transparent;
   color: #002b45;
@@ -145,6 +147,15 @@
 .vfrc-button--secondary:hover {
   background-color: #add8e6;
   border-color: rgba(0, 43, 69, 0.7);
+}
+
+/* Updated actions container for vertical layout */
+.vfrc-system-response--actions.c-iBV1vN {
+  padding-left: 60px !important;
+  margin-left: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
 }
 
 .vfrc-header--title.c-kfyIxT {
@@ -192,26 +203,6 @@
 .vfrc-header--button:nth-of-type(1) .vfrc-icon {
   width: 24px !important;
   height: 24px !important;
-}
-
-/* Updated button container alignment */
-.c-kDxFae > .c-bwlaNm, 
-.c-kDxFae > .c-gSBsRr,
-.vfrc-system-response--actions,
-div[class*="vfrc-system-response--actions"],
-.c-iBV1vN {
-  padding-left: 0 !important;
-  margin-left: 0 !important;
-}
-
-/* Target the specific actions container */
-.vfrc-system-response--actions.c-iBV1vN {
-  padding-left: 0 !important;
-  margin-left: 0 !important;
-}
-
-.c-gSBsRr .c-kIbiaN {
-  margin: 0px !important;
 }
 
 .vfrc-header--button:nth-of-type(2) .vfrc-icon {
