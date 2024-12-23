@@ -194,8 +194,20 @@
   height: 24px !important;
 }
 
-.c-kDxFae > .c-bwlaNm, .c-kDxFae > .c-gSBsRr {
-  padding-left: 0px;
+/* Updated button container alignment */
+.c-kDxFae > .c-bwlaNm, 
+.c-kDxFae > .c-gSBsRr,
+.vfrc-system-response--actions,
+div[class*="vfrc-system-response--actions"],
+.c-iBV1vN {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+/* Target the specific actions container */
+.vfrc-system-response--actions.c-iBV1vN {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
 }
 
 .c-gSBsRr .c-kIbiaN {
