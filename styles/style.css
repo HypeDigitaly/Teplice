@@ -35,14 +35,14 @@
 
 /* Updated Avatar image size */
 .vfrc-avatar.c-kIbiaN img {
-  width: 50px !important;
-  height: 50px !important;
+  width: 75px !important;
+  height: 75px !important;
   object-fit: cover !important;
 }
 
 .c-kIbiaN-iiTsXc-size-small.c-kIbiaN-ijxdCMB-css {
-  width: 50px !important;
-  height: 50px !important;
+  width: 75px !important;
+  height: 75px !important;
   background-size: cover !important;
   background-position: center !important;
   background-color: #ffffff;
