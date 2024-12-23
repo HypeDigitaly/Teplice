@@ -49,7 +49,7 @@
   object-fit: cover !important;
 }
 
-/* Conversation avatar size */
+/* Conversation avatar size and positioning */
 .c-kIbiaN-iiTsXc-size-small.c-kIbiaN-icGAGGr-css {
   width: 50px !important;
   height: 50px !important;
@@ -57,6 +57,12 @@
   background-position: center !important;
   background-color: #ffffff;
   border-radius: 20px;
+  margin-left: -15px; /* Added negative margin for left shift */
+}
+
+/* System response container positioning */
+.vfrc-system-response {
+  margin-left: -15px;
 }
 
 /* Updated message container width */
@@ -65,16 +71,17 @@
 .vfrc-system-response--list,
 .vfrc-message,
 .c-PJLV-jueArD-from-system {
-  width: 110% !important;
-  max-width: 110% !important;
+  width: 100% !important;
+  max-width: 100% !important;
   padding-right: 20px !important;
-  margin-right: -10% !important;
+  margin-right: 0 !important;
+  box-sizing: border-box;
 }
 
 .c-kDxFae > .c-iBVlvN {
-  padding: 0 20px 0 60px !important;
+  padding: 0 20px 0 45px !important;
   max-width: none !important;
-  width: 110% !important;
+  width: 100% !important;
 }
 
 .vfrc-header.c-iCDrnV {
@@ -181,8 +188,8 @@
   flex-direction: column !important;
   gap: 4px !important;
   align-items: flex-start !important;
-  width: 110% !important;
-  max-width: 110% !important;
+  width: 100% !important;
+  max-width: 100% !important;
   flex-wrap: nowrap !important;
 }
 
@@ -301,9 +308,10 @@
   color: #ffffff;
   text-align: left !important;
   font-size: 16px;
-  width: 110% !important;
-  max-width: 110% !important;
-  margin-right: -10% !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-right: 0 !important;
+  box-sizing: border-box;
 }
 
 .vfrc-proactive-message {
@@ -313,16 +321,16 @@
 /* Mobile-specific styles */
 @media (max-width: 767px) {
   .c-PJLV-jueArD-from-system {
-    width: 110% !important;
-    max-width: 110% !important;
-    margin-right: -10% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-right: 0 !important;
     font-size: 13px;
   }
 
   .c-PJLV-gJqBfM-from-user {
-    width: 110% !important;
-    max-width: 110% !important;
-    margin-right: -10% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-right: 0 !important;
     font-size: 13px;
   }
 
@@ -330,8 +338,8 @@
   .vfrc-system-response--actions {
     margin-left: 22px !important;
     margin-top: 4px !important;
-    width: 110% !important;
-    max-width: 110% !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
   .vfrc-button--secondary {
