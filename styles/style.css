@@ -122,9 +122,9 @@
   margin-left: -1px;
 }
 
-/* Updated button styles for content-fit width and vertical stacking */
+/* Updated button styles for content-fit width and forced vertical stacking */
 .vfrc-button--secondary {
-  display: inline-flex !important;
+  display: block !important;
   width: fit-content !important;
   max-width: fit-content !important;
   border: 1px solid #FDCA40;
@@ -142,7 +142,9 @@
     border-color 100ms ease-in-out 0s;
   white-space: nowrap !important;
   text-align: left;
-  align-self: flex-start !important;
+  flex: 0 0 auto !important;
+  float: none !important;
+  clear: both !important;
 }
 
 .vfrc-button--secondary:hover {
@@ -150,14 +152,17 @@
   border-color: rgba(0, 43, 69, 0.7);
 }
 
-/* Updated actions container for vertical layout */
-.vfrc-system-response--actions.c-iBV1vN {
+/* Updated actions container for forced vertical layout */
+.vfrc-system-response--actions.c-iBV1vN,
+.vfrc-system-response--actions {
   padding-left: 60px !important;
   margin-left: 0 !important;
   display: flex !important;
   flex-direction: column !important;
   gap: 4px !important;
   align-items: flex-start !important;
+  width: 100% !important;
+  flex-wrap: nowrap !important;
 }
 
 .vfrc-header--title.c-kfyIxT {
