@@ -2,11 +2,11 @@
   box-shadow: #000000;
 }
 
-.vfrc-widget--chat {
+.vfrc-widget--chat.c-jmjhPs {
   animation: fadeInChat 1s ease-out;
 }
 
-.vfrc-assistant-info--title {
+.vfrc-assistant-info--title.c-kfyIxT {
   font-size: 20px;
 }
 
@@ -14,26 +14,77 @@
   color: rgb(17, 24, 28);
 }
 
-.vfrc-icon.c-dhzjXW-iPJLV-css {
+.vfrc-icon.c-dhzjXW {
   width: 24px;
   height: 24px;
 }
 
-.c-kIbiaN-eyfkxi-size-large {
+.c-kIbiaN-iiTsXc-size-large {
   width: 72px;
   height: 72px;
-  background-color: rgb(255 255 255);
+  background-color: #FDCA40;
   border: #000000 1px solid;
 }
 
-/* picture avatar small */
-.c-kIbiaN-iiTsXc-size-small.c-kIbiaN-idGGCtY-css {
-  width: 55px;
-  height: 55px;
+/* Fixed header avatar size */
+.c-iCDrnV .c-kIbiaN {
+  width: 48px;
+  height: 48px;
+  background-color: #ed143d00;
+}
+
+/* Avatar image size */
+.vfrc-avatar.c-kIbiaN img {
+  width: 90px !important;
+  height: 90px !important;
+  object-fit: cover !important;
+}
+
+/* Conversation avatar size */
+.c-kIbiaN-iiTsXc-size-small.c-kIbiaN-icGAGGr-css {
+  width: 50px !important;
+  height: 50px !important;
   background-size: cover !important;
   background-position: center !important;
   background-color: #ffffff;
   border-radius: 20px;
+}
+
+/* Updated message container width */
+.vfrc-system-response--actions.c-iBV1vN,
+.vfrc-system-response--actions,
+.vfrc-system-response--list,
+.vfrc-message,
+.c-PJLV-jueArD-from-system {
+  width: 125% !important;
+  max-width: 125% !important;
+  padding-right: 20px !important;
+  margin-right: -25% !important;
+}
+
+.c-kDxFae > .c-iBVlvN {
+  padding: 0 20px 0 60px !important;
+  max-width: none !important;
+  width: 125% !important;
+}
+
+.vfrc-header.c-iCDrnV {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.vfrc-header.c-iCDrnV .vfrc-avatar {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 10px;
+}
+
+.c-iCDrnV .c-kfyIxT {
+  margin: 0px 0px 0px 40px;
 }
 
 .c-dzcdPv .vfrc-header--button {
@@ -47,7 +98,7 @@
   transition: all 100ms ease 0s;
 }
 
-.vfrc-chat-dialog {
+.vfrc-chat-dialog.c-kDxFae {
   flex: 1 1 0px;
   overflow: hidden;
   min-height: 0px;
@@ -68,11 +119,11 @@
 }
 
 .c-bXTvXv-lckiv-type-info {
-  background-color: #000000;
+  background-color: #FDCA40;
 }
 
 .c-bXTvXv-lckiv-type-info:hover {
-  background-color: #161616;
+  background-color: #FDCA40;
 }
 
 .vfrc-message {
@@ -94,25 +145,17 @@
   margin-left: -1px;
 }
 
-/* Updated text input styling with vertical alignment and padding */
-.vfrc-chat-input textarea {
-  text-align: left;
-  font-size: 16px;
-  color: #000000;
-  padding-left: 15px;
-  display: flex;
-  align-items: center;
-  vertical-align: middle;
-}
-
+/* Button styles for vertical stacking */
 .vfrc-button--secondary {
-  display: inline-block;
-  border: 1px solid #000000;
+  display: block !important;
+  width: fit-content !important;
+  max-width: fit-content !important;
+  border: 1px solid #FDCA40;
   font-size: 16px;
   font-weight: 500;
   border-radius: 20px;
   padding: 9px 13px;
-  margin: 0px;
+  margin: 0px 0px 8px 0px !important;
   box-sizing: border-box;
   background-color: white;
   color: #002b45;
@@ -125,43 +168,50 @@
 
 .vfrc-button--secondary:hover {
   background-color: #add8e6;
-  border-color: rgba(0, 24, 39, 0.7);
+  border-color: rgba(0, 43, 69, 0.7);
 }
 
-.vfrc-header--title {
+/* Fixed button container alignment */
+.vfrc-system-response--actions.c-iBV1vN,
+.vfrc-system-response--actions {
+  margin-left: 10px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+  align-items: flex-start !important;
+  width: 125% !important;
+  max-width: 125% !important;
+  flex-wrap: nowrap !important;
+}
+
+.vfrc-header--title.c-kfyIxT {
   color: #fffffffa;
-  font-size: 18px;  /* Updated: Increased by 2px */
+  font-size: 16px;
 }
 
-.vfrc-launcher img {
+.vfrc-launcher.c-bQoszf img {
   width: 72px;
   height: 72px;
   border-radius: 40px;
 }
 
-.vfrc-proactive-message {
-  border: rgb(0, 0, 0) 1px solid;
-  text-align: left !important;
+.vfrc-proactive-message.c-fbwYwp {
   font-weight: 700;
 }
 
-.vfrc-launcher {
-  width: 75px;
-  height: 75px;
-  border: none;
+.vfrc-launcher.c-bQoszf {
+  width: 80px;
+  height: 80px;
+  background-color: #FDCA40;
+  border: #000000 4px solid;
   animation: fadeIn 0.5s ease-in-out;
-  transition: transform 150ms ease 0s !important;
-  background-size: cover !important;
-  background-position: center !important;
-  border: transparent;
-  background-color: #ffffff !important;  /* Updated: Changed to white background */
-  box-shadow: none;
-  border-radius: 50%;  /* Added for circular shape */
+  transition: transform 150ms ease 0s, opacity 150ms ease 0s !important;
+  box-shadow: #000000;
 }
 
-.vfrc-launcher:hover {
+.vfrc-launcher.c-bQoszf:hover {
   transform: scale(1.1);
-  opacity: 0.8; 
+  opacity: 0.8;
   background-color: white;
 }
 
@@ -181,60 +231,61 @@
   height: 24px !important;
 }
 
-.c-kDxFae > .c-bwlaNm, .c-kDxFae > .c-gSBsRr {
-  padding-left: 5px;
-}
-
-.c-gSBsRr .c-kIbiaN {
-  margin: 0px !important;
-}
-
 .vfrc-header--button:nth-of-type(2) .vfrc-icon {
   width: 24px !important;
   height: 24px !important;
 }
 
-.vfrc-launcher:hover {
+.vfrc-launcher.c-bQoszf:hover {
   background-color: none;
 }
 
-/* text footer mark - Updated size and weight */
-.c-cejRVw {
+/* Footer watermark styles */
+.c-cejRNw {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px 0 var(--space-3) 0;
-  font-size: 15px;  /* Updated: Increased by 3px */
-  font-weight: 700;  /* Updated: Changed to bold */
+  font-size: 12px;
+  font-weight: 700;
   line-height: 17px;
-  color: #000000;
+  color: #FDCA40 !important;
 }
 
-/* color footer mark/ your brand/ */
-.c-cejRVw a {
-  color: #000000;
+.c-cejRNw * {
+  color: #FDCA40 !important;
+  font-weight: 700 !important;
+}
+
+.c-cejRNw a {
+  color: #FDCA40 !important;
+  font-weight: 700 !important;
+  text-decoration: none;
 }
 
 .vfrc-footer--watermark {
-  color: #000000;
+  color: #FDCA40 !important;
+  font-weight: 700 !important;
 }
 
-/* color header/ change here */
-.vfrc-header {
-  background-color: #000000;
+.vfrc-footer--watermark * {
+  color: #FDCA40 !important;
+  font-weight: 700 !important;
+}
+
+.vfrc-header.c-iCDrnV {
+  background-color: #FDCA40;
   height: 66px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
 
-/* color of the name of the agent/ change here */
 .vfrc-assistant-info--title {
   color: #000000;
 }
 
-/* cancel chat color */
 .c-bXTvXv-igaDqE-type-subtle {
-  background-color: #000000;
+  background-color: #FDCA40;
   color: #ffffff;
 }
 
@@ -242,152 +293,97 @@
   color: #ffffff;
 }
 
-/* Base AI message styling */
-.c-PJLV-jueArD-from-system {
-  text-align: left !important;
-  font-size: 16px;
-}
-
-/* Base user message styling */
 .c-PJLV-gJqBfM-from-user {
-  background-color: #000000;
+  background-color: #FDCA40;
   color: #ffffff;
   text-align: left !important;
   font-size: 16px;
 }
 
 .vfrc-proactive-message {
-  border: rgb(0, 0, 0) 1px solid;
-  text-align: left !important;
+  border: black 1px solid;
 }
 
-/* Mobile-only styles */
-@media (max-width: 767px) and (any-pointer: coarse) and (any-hover: none), 
-       (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2),
-       (max-width: 767px) and (min-resolution: 192dpi) {
-  .vfrc-proactive-message {
-    font-size: 10px;
-    padding: 5px 8px !important;
+/* Mobile-specific styles */
+@media (max-width: 767px) {
+  .c-PJLV-jueArD-from-system {
+    width: 125% !important;
+    max-width: 125% !important;
+    margin-right: -25% !important;
+    font-size: 13px;
   }
 
-  /* Updated header caption size for mobile */
-  .vfrc-assistant-info--title {
+  .vfrc-system-response--actions.c-iBV1vN,
+  .vfrc-system-response--actions {
+    margin-left: 10px !important;
+    width: 125% !important;
+    max-width: 125% !important;
+  }
+
+  .vfrc-button--secondary {
     font-size: 13px;
+    margin: 0px 0px 8px 0px !important;
   }
 
   .vfrc-message {
-    font-size: 11px;
-  }
-
-  /* Mobile-specific AI message styling */
-  .c-PJLV-jueArD-from-system {
-    width: 125% !important;
-    max-width: 125% !important;
-    margin-right: -25% !important;
     font-size: 13px;
   }
 
-  .vfrc-button--secondary {
-    font-size: 13px;
-    margin-left: 10px !important;
-    margin-right: -3px !important;  /* Added for closer button spacing */
-  }
-
-  .vfrc-header--title {
-    font-size: 13px;  /* Updated proportionally */
-  }
-
-  .c-cejRVw {
-    font-size: 11px;  /* Updated proportionally */
-    font-weight: 700;  /* Keeping bold in mobile */
-  }
-
-  .vfrc-assistant-info--description {
-    font-size: 11px;
-  }
-
-  /* Mobile user input styling */
-  .vfrc-chat-input textarea,
-  .vfrc-chat-input textarea:focus,
-  .vfrc-chat-input textarea:active,
-  .vfrc-chat-input textarea:focus-visible {
-    font-size: 13px !important;
-    text-align: left !important;
-    -webkit-text-size-adjust: none;
-    padding-left: 15px;
-  }
-
-  .vfrc-chat-input--button {
-    font-size: 11px;
-  }
-  
-  /* Mobile user message styling */
-  .c-PJLV-gJqBfM-from-user {
+  .vfrc-chat-input textarea {
     font-size: 13px !important;
   }
 }
 
-/* iOS-specific fixes */
-@supports (-webkit-touch-callout: none) {
-  @media (max-width: 767px) {
-    .c-PJLV-jueArD-from-system {
-      width: 125% !important;
-      max-width: 125% !important;
-      margin-right: -25% !important;
-    }
-
-    .vfrc-chat-input textarea,
-    .vfrc-chat-input textarea:focus,
-    .vfrc-chat-input textarea:active,
-    .vfrc-chat-input textarea:focus-visible {
-      font-size: 13px !important;
-      text-align: left !important;
-      -webkit-text-size-adjust: none;
-      padding-left: 15px;
-    }
-
-    .c-PJLV-gJqBfM-from-user {
-      font-size: 13px !important;
-    }
-
-    .vfrc-button--secondary {
-      margin-left: 10px !important;
-      margin-right: -3px !important;  /* Added for closer button spacing */
-    }
-  }
+.vfrc-widget--launcher.c-PJLV {
+  bottom: 30px;
+  right: 30px;
 }
 
-/* Additional mobile detection for older devices */
-@media only screen and (max-device-width: 767px),
-       only screen and (max-device-height: 767px) and (orientation: landscape) {
-  .c-PJLV-jueArD-from-system {
-    width: 125% !important;
-    max-width: 125% !important;
-    margin-right: -25% !important;
-  }
-
-  .vfrc-chat-input textarea,
-  .vfrc-chat-input textarea:focus,
-  .vfrc-chat-input textarea:active,
-  .vfrc-chat-input textarea:focus-visible {
-    font-size: 13px !important;
-    text-align: left !important;
-    -webkit-text-size-adjust: none;
-    padding-left: 15px;
-  }
-
-  .c-PJLV-gJqBfM-from-user {
-    font-size: 13px !important;
-  }
-
-  .vfrc-button--secondary {
-    margin-left: 10px !important;
-    margin-right: -3px !important;  /* Added for closer button spacing */
-  }
+.vfrc-proactive.c-dgCmtz {
+  right: 0px;
+  align-items: end;
 }
 
+.vfrc-chat-input.c-dNrVYs {
+  display: flex;
+  align-items: center;
+  padding: var(--space-3);
+}
+
+.vfrc-chat-input textarea {
+  text-align: left;
+  color: #000000;
+  padding-left: 15px;
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+}
+
+textarea#vf-chat-input--cm50wq9jx0001356rbFr26w1p {
+  height: 29px !important;
+}
+
+.vfrc-proactive-close.c-fMtpfM {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+}
+
+.vfrc-proactive-close.c-fMtpfM .vfrc-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Desktop styles for larger widget */
 @media screen and (min-width: 768px) {
   .vfrc-widget--chat {
     border-radius: 20px;
+    height: 85vh !important;
+    max-height: 900px !important;
   }
 }
