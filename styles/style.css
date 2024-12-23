@@ -26,9 +26,10 @@
   border: #000000 1px solid;
 }
 
+/* Updated header avatar size */
 .c-iCDrnV .c-kIbiaN {
-  width: 160px;
-  height: 200px;
+  width: 48px;
+  height: 48px;
   background-color: #ed143d00;
 }
 
@@ -122,7 +123,7 @@
   margin-left: -1px;
 }
 
-/* Updated button styles for content-fit width and forced vertical stacking */
+/* Updated button styles for content-fit width and minimal spacing */
 .vfrc-button--secondary {
   display: block !important;
   width: fit-content !important;
@@ -133,7 +134,7 @@
   border-radius: 20px;
   padding: 9px 13px;
   margin: 0px;
-  margin-bottom: 4px !important;
+  margin-bottom: 0px !important;
   box-sizing: border-box;
   background-color: transparent;
   color: #002b45;
@@ -152,14 +153,14 @@
   border-color: rgba(0, 43, 69, 0.7);
 }
 
-/* Updated actions container for forced vertical layout */
+/* Updated actions container for vertical layout with minimal gap */
 .vfrc-system-response--actions.c-iBV1vN,
 .vfrc-system-response--actions {
   padding-left: 60px !important;
   margin-left: 0 !important;
   display: flex !important;
   flex-direction: column !important;
-  gap: 4px !important;
+  gap: 0px !important;
   align-items: flex-start !important;
   width: 100% !important;
   flex-wrap: nowrap !important;
