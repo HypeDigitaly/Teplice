@@ -122,9 +122,11 @@
   margin-left: -1px;
 }
 
-/* Updated button styles for content-fit width and reduced spacing */
+/* Updated button styles for content-fit width and vertical stacking */
 .vfrc-button--secondary {
-  display: inline-block;
+  display: inline-flex !important;
+  width: fit-content !important;
+  max-width: fit-content !important;
   border: 1px solid #FDCA40;
   font-size: 16px;
   font-weight: 500;
@@ -132,16 +134,15 @@
   padding: 9px 13px;
   margin: 0px;
   margin-bottom: 4px !important;
-  width: auto !important;
   box-sizing: border-box;
   background-color: transparent;
   color: #002b45;
   cursor: pointer;
   transition: background-color 50ms ease-in-out 0s,
     border-color 100ms ease-in-out 0s;
-  white-space: nowrap;
+  white-space: nowrap !important;
   text-align: left;
-  font-size: 16px;
+  align-self: flex-start !important;
 }
 
 .vfrc-button--secondary:hover {
@@ -149,13 +150,14 @@
   border-color: rgba(0, 43, 69, 0.7);
 }
 
-/* Updated actions container for vertical layout with reduced gap */
+/* Updated actions container for vertical layout */
 .vfrc-system-response--actions.c-iBV1vN {
   padding-left: 60px !important;
   margin-left: 0 !important;
   display: flex !important;
   flex-direction: column !important;
   gap: 4px !important;
+  align-items: flex-start !important;
 }
 
 .vfrc-header--title.c-kfyIxT {
@@ -214,7 +216,7 @@
   background-color: none;
 }
 
-/* Updated footer watermark styles */
+/* Footer watermark styles */
 .c-cejRNw {
   display: flex;
   justify-content: center;
