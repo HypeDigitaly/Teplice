@@ -26,11 +26,20 @@
   border: #000000 1px solid;
 }
 
-/* Fixed header avatar size */
+/* Fixed header avatar size and position */
 .c-iCDrnV .c-kIbiaN {
   width: 48px;
   height: 48px;
   background-color: #ed143d00;
+}
+
+/* Adjusted avatar positioning */
+.vfrc-header.c-iCDrnV .vfrc-avatar {
+  position: absolute;
+  left: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 10px;
 }
 
 /* Avatar image size */
@@ -56,16 +65,16 @@
 .vfrc-system-response--list,
 .vfrc-message,
 .c-PJLV-jueArD-from-system {
-  width: 115% !important;
-  max-width: 115% !important;
+  width: 110% !important;
+  max-width: 110% !important;
   padding-right: 20px !important;
-  margin-right: -15% !important;
+  margin-right: -10% !important;
 }
 
 .c-kDxFae > .c-iBVlvN {
   padding: 0 20px 0 60px !important;
   max-width: none !important;
-  width: 115% !important;
+  width: 110% !important;
 }
 
 .vfrc-header.c-iCDrnV {
@@ -75,16 +84,8 @@
   position: relative;
 }
 
-.vfrc-header.c-iCDrnV .vfrc-avatar {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  margin-right: 10px;
-}
-
 .c-iCDrnV .c-kfyIxT {
-  margin: 0px 0px 0px 40px;
+  margin: 0px 0px 0px 32px;
 }
 
 .c-dzcdPv .vfrc-header--button {
@@ -171,17 +172,17 @@
   border-color: rgba(0, 43, 69, 0.7);
 }
 
-/* Fixed button container alignment with added top spacing */
+/* Fixed button container alignment with reduced spacing */
 .vfrc-system-response--actions.c-iBV1vN,
 .vfrc-system-response--actions {
   margin-left: 22px !important;
-  margin-top: 5px !important;
+  margin-top: 4px !important;
   display: flex !important;
   flex-direction: column !important;
   gap: 4px !important;
   align-items: flex-start !important;
-  width: 115% !important;
-  max-width: 115% !important;
+  width: 110% !important;
+  max-width: 110% !important;
   flex-wrap: nowrap !important;
 }
 
@@ -308,16 +309,16 @@
 /* Mobile-specific styles */
 @media (max-width: 767px) {
   .c-PJLV-jueArD-from-system {
-    width: 115% !important;
-    max-width: 115% !important;
-    margin-right: -15% !important;
+    width: 110% !important;
+    max-width: 110% !important;
+    margin-right: -10% !important;
     font-size: 13px;
   }
 
   .vfrc-system-response--actions.c-iBV1vN,
   .vfrc-system-response--actions {
-    margin-left: 30px !important;
-    margin-top: 16px !important;
+    margin-left: 22px !important;
+    margin-top: 4px !important;
     width: 110% !important;
     max-width: 110% !important;
   }
