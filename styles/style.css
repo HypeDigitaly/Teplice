@@ -38,12 +38,12 @@
 
 /* picture avatar small */
 .c-kIbiaN-iiTsXc-size-small.c-kIbiaN-ijxdCMB-css {
-  width: 75px;
-  height: 75px;
+  width: 50px;
+  height: 50px;
   background-size: cover !important;
   background-position: center !important;
   background-color: #FDCA40;
-  border-radius: 30px;
+  border-radius: 20px;
 }
 
 .vfrc-header.c-iCDrnV {
@@ -55,7 +55,7 @@
 
 .vfrc-header.c-iCDrnV .vfrc-avatar {
   position: absolute;
-  left: 10px;
+  left: 0;
   top: 50%;
   transform: translateY(-50%);
   margin-right: 10px;
@@ -194,19 +194,19 @@
   height: 24px !important;
 }
 
-/* Updated button container alignment to match messages */
+/* Updated button container alignment */
 .c-kDxFae > .c-bwlaNm, 
 .c-kDxFae > .c-gSBsRr,
 .vfrc-system-response--actions,
 div[class*="vfrc-system-response--actions"],
 .c-iBV1vN {
-  padding-left: 40px !important;
+  padding-left: 0 !important;
   margin-left: 0 !important;
 }
 
 /* Target the specific actions container */
 .vfrc-system-response--actions.c-iBV1vN {
-  padding-left: 40px !important;
+  padding-left: 0 !important;
   margin-left: 0 !important;
 }
 
