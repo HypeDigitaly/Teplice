@@ -33,17 +33,20 @@
   background-color: #ed143d00;
 }
 
-/* Avatar image size */
+/* Updated Avatar image size */
 .vfrc-avatar.c-kIbiaN img {
-  width: 90px !important;
-  height: 90px !important;
+  width: 50px !important;
+  height: 50px !important;
   object-fit: cover !important;
 }
 
-.c-kIbiaN-iiTsXc-size-small.c-kIbiaN-ijxdCMB-css img {
-  width: 90px !important;
-  height: 90px !important;
-  object-fit: cover !important;
+.c-kIbiaN-iiTsXc-size-small.c-kIbiaN-ijxdCMB-css {
+  width: 50px !important;
+  height: 50px !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-color: #ffffff;
+  border-radius: 20px;
 }
 
 /* Updated message container width */
@@ -62,6 +65,15 @@
   padding: 0 20px 0 60px !important;
   max-width: none !important;
   width: 100% !important;
+}
+
+.c-kDxFae > .c-bwlaNm, 
+.c-kDxFae > .c-gSBsRr {
+  padding-left: 5px;
+}
+
+.c-gSBsRr .c-kIbiaN {
+  margin: 0px !important;
 }
 
 .vfrc-header.c-iCDrnV {
