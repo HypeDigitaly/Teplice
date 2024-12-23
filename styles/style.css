@@ -185,7 +185,7 @@
 /* Actions container for vertical layout */
 .vfrc-system-response--actions.c-iBV1vN,
 .vfrc-system-response--actions {
-  padding-left: 60px !important;
+  padding-left: 5px !important;
   margin-left: 0 !important;
   display: flex !important;
   flex-direction: column !important;
