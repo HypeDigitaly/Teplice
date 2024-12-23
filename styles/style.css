@@ -175,7 +175,7 @@
 .vfrc-system-response--actions.c-iBV1vN,
 .vfrc-system-response--actions {
   margin-left: 22px !important;
-  margin-top: 10px !important;
+  margin-top: 5px !important;
   display: flex !important;
   flex-direction: column !important;
   gap: 4px !important;
@@ -318,8 +318,8 @@
   .vfrc-system-response--actions {
     margin-left: 30px !important;
     margin-top: 16px !important;
-    width: 115% !important;
-    max-width: 115% !important;
+    width: 110% !important;
+    max-width: 110% !important;
   }
 
   .vfrc-button--secondary {
