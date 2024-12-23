@@ -22,8 +22,8 @@
 .c-kIbiaN-iiTsXc-size-large {
   width: 72px;
   height: 72px;
-  background-color: rgb(255 255 255);
-  border: #0000ff 1px solid;
+  background-color: #FDCA40;
+  border: #000000 1px solid;  /* Changed to black as specified */
 }
 
 .c-iCDrnV .c-kIbiaN {
@@ -97,11 +97,11 @@
 }
 
 .c-bXTvXv-lckiv-type-info {
-  background-color: #000dff;
+  background-color: #FDCA40;  /* Changed from blue */
 }
 
 .c-bXTvXv-lckiv-type-info:hover {
-  background-color: #000dff;
+  background-color: #FDCA40;  /* Changed from blue */
 }
 
 .vfrc-message {
@@ -124,7 +124,7 @@
 
 .vfrc-button--secondary {
   display: inline-block;
-  border: 1px solid #0000ff;
+  border: 1px solid #FDCA40;  /* Changed from blue */
   font-size: 16px;
   font-weight: 500;
   border-radius: 20px;
@@ -164,8 +164,8 @@
 .vfrc-launcher.c-bQoszf {
   width: 80px;
   height: 80px;
-  background-color: #fff;
-  border: #0000ff 4px solid;
+  background-color: #FDCA40;
+  border: #000000 4px solid;  /* Changed to black as specified */
   animation: fadeIn 0.5s ease-in-out;
   transition: transform 150ms ease 0s, opacity 150ms ease 0s !important;
   box-shadow: #000000;
@@ -219,21 +219,21 @@
   font-size: 12px;
   font-weight: 400;
   line-height: 17px;
-  color: #000dff;
+  color: #FDCA40;  /* Changed from blue */
 }
 
 /* color footer mark/ your brand/ */
 .c-cejRNw a {
-  color: #0000ff;
+  color: #FDCA40;  /* Changed from blue */
 }
 
 .vfrc-footer--watermark {
-  color: #0000ff;
+  color: #FDCA40;  /* Changed from blue */
 }
 
 /* color header/ change here */
 .vfrc-header.c-iCDrnV {
-  background-color: #000dff;
+  background-color: #FDCA40;  /* Changed from blue */
   height: 66px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -246,7 +246,7 @@
 
 /* cancel chat color */
 .c-bXTvXv-igaDqE-type-subtle {
-  background-color: #000dff;
+  background-color: #FDCA40;  /* Changed from blue */
   color: #ffffff;
 }
 
@@ -260,13 +260,13 @@
 
 /* message send from user */
 .c-PJLV-gJqBfM-from-user {
-  background-color: #000dff;
+  background-color: #FDCA40;  /* Changed from blue */
   color: #ffffff;
   text-align: left !important;
 }
 
 .vfrc-proactive-message {
-  border: blue 1px solid;
+  border: black 1px solid;  /* Changed to black as specified */
 }
 
 /* color text area */
