@@ -140,13 +140,13 @@
   margin-left: -1px;
 }
 
-/* Button styles for vertical stacking */
+/* Updated button styles with font size and wrapping fixes */
 .vfrc-button--secondary {
   display: block !important;
   width: fit-content !important;
-  max-width: fit-content !important;
+  max-width: 100% !important;
   border: 1px solid #FDCA40;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 500;
   border-radius: 20px;
   padding: 9px 13px;
@@ -158,11 +158,13 @@
   cursor: pointer;
   transition: background-color 50ms ease-in-out 0s,
     border-color 100ms ease-in-out 0s;
-  white-space: nowrap !important;
+  white-space: normal !important;
   text-align: left;
   flex: 0 0 auto !important;
   float: none !important;
   clear: both !important;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .vfrc-button--secondary:hover {
