@@ -33,14 +33,16 @@
   background-color: #ed143d00;
 }
 
+/* Updated message container for wider messages */
 .c-kDxFae > .c-iBVlvN {
-  padding: 0 var(--space-5) 0 60px;
+  padding: 0 20px 0 60px;
+  max-width: 95% !important;
 }
 
-/* picture avatar small */
+/* Updated small avatar size */
 .c-kIbiaN-iiTsXc-size-small.c-kIbiaN-ijxdCMB-css {
-  width: 50px;
-  height: 50px;
+  width: 65px;
+  height: 65px;
   background-size: cover !important;
   background-position: center !important;
   background-color: #FDCA40;
@@ -105,9 +107,12 @@
   background-color: #FDCA40;
 }
 
+/* Updated message styles for wider content */
 .vfrc-message {
   font-weight: 400;
   border-radius: 20px;
+  max-width: 95% !important;
+  width: auto !important;
 }
 
 .c-fYYkXN {
@@ -275,8 +280,11 @@
   color: #ffffff;
 }
 
+/* Updated system message styles for wider content */
 .c-PJLV-jueArD-from-system {
   text-align: left !important;
+  max-width: 95% !important;
+  margin-right: 20px !important;
 }
 
 .c-PJLV-gJqBfM-from-user {
@@ -330,8 +338,10 @@ textarea#vf-chat-input--cm50wq9jx0001356rbFr26w1p {
   height: 100%;
 }
 
+/* Updated desktop styles for larger widget */
 @media screen and (min-width: 768px) {
   .vfrc-widget--chat {
     border-radius: 20px;
+    height: 130% !important;
   }
 }
