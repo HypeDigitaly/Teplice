@@ -33,20 +33,35 @@
   background-color: #ed143d00;
 }
 
-/* Updated message container for wider messages */
-.c-kDxFae > .c-iBVlvN {
-  padding: 0 20px 0 60px;
-  max-width: 95% !important;
+/* Avatar image size */
+.vfrc-avatar.c-kIbiaN img {
+  width: 90px !important;
+  height: 90px !important;
+  object-fit: cover !important;
 }
 
-/* Updated small avatar size */
-.c-kIbiaN-iiTsXc-size-small.c-kIbiaN-ijxdCMB-css {
-  width: 65px;
-  height: 65px;
-  background-size: cover !important;
-  background-position: center !important;
-  background-color: #FDCA40;
-  border-radius: 20px;
+.c-kIbiaN-iiTsXc-size-small.c-kIbiaN-ijxdCMB-css img {
+  width: 90px !important;
+  height: 90px !important;
+  object-fit: cover !important;
+}
+
+/* Updated message container width */
+.vfrc-system-response--actions.c-iBV1vN,
+.vfrc-system-response--actions,
+.vfrc-system-response--list,
+.vfrc-message,
+.c-PJLV-jueArD-from-system {
+  width: 100% !important;
+  max-width: none !important;
+  padding-right: 20px !important;
+  margin-right: 0 !important;
+}
+
+.c-kDxFae > .c-iBVlvN {
+  padding: 0 20px 0 60px !important;
+  max-width: none !important;
+  width: 100% !important;
 }
 
 .vfrc-header.c-iCDrnV {
@@ -107,12 +122,9 @@
   background-color: #FDCA40;
 }
 
-/* Updated message styles for wider content */
 .vfrc-message {
   font-weight: 400;
   border-radius: 20px;
-  max-width: 95% !important;
-  width: auto !important;
 }
 
 .c-fYYkXN {
@@ -128,7 +140,7 @@
   margin-left: -1px;
 }
 
-/* Updated button styles for content-fit width and minimal spacing */
+/* Button styles for vertical stacking */
 .vfrc-button--secondary {
   display: block !important;
   width: fit-content !important;
@@ -158,7 +170,7 @@
   border-color: rgba(0, 43, 69, 0.7);
 }
 
-/* Updated actions container for vertical layout with minimal gap */
+/* Actions container for vertical layout */
 .vfrc-system-response--actions.c-iBV1vN,
 .vfrc-system-response--actions {
   padding-left: 60px !important;
@@ -280,13 +292,6 @@
   color: #ffffff;
 }
 
-/* Updated system message styles for wider content */
-.c-PJLV-jueArD-from-system {
-  text-align: left !important;
-  max-width: 95% !important;
-  margin-right: 20px !important;
-}
-
 .c-PJLV-gJqBfM-from-user {
   background-color: #FDCA40;
   color: #ffffff;
@@ -338,10 +343,11 @@ textarea#vf-chat-input--cm50wq9jx0001356rbFr26w1p {
   height: 100%;
 }
 
-/* Updated desktop styles for larger widget */
+/* Desktop styles for larger widget */
 @media screen and (min-width: 768px) {
   .vfrc-widget--chat {
     border-radius: 20px;
-    height: 130% !important;
+    height: 85vh !important;
+    max-height: 900px !important;
   }
 }
