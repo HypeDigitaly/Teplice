@@ -28,8 +28,8 @@
 
 /* Updated header avatar size */
 .c-iCDrnV .c-kIbiaN {
-  width: 48px;
-  height: 48px;
+  width: 160px;
+  height: 200px;
   background-color: #ed143d00;
 }
 
@@ -38,6 +38,16 @@
   width: 90px !important;
   height: 90px !important;
   object-fit: cover !important;
+}
+
+/* Avatar small size update */
+.c-kIbiaN-iiTsXc-size-small.c-kIbiaN-icGAGGr-css {
+  width: 50px !important;
+  height: 50px !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-color: #ffffff;
+  border-radius: 20px;
 }
 
 .c-kIbiaN-iiTsXc-size-small.c-kIbiaN-ijxdCMB-css img {
