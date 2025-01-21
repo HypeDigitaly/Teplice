@@ -46,7 +46,7 @@
   object-fit: cover !important;
 }
 
-/* Updated chat dialog container with new scroll behavior */
+/* Updated chat dialog container with fixed scroll behavior */
 .vfrc-chat-dialog.c-kDxFae {
   flex: 1 1 0px;
   overflow-y: auto;
@@ -57,10 +57,24 @@
   scroll-behavior: smooth;
   display: flex;
   flex-direction: column;
+  overflow-anchor: none; /* Prevent browser auto-scroll */
 }
 
-/* Updated message container with new scroll and animation behavior */
-.vfrc-system-response--list.c-iTxaCK,
+/* Ensure messages start from top */
+.vfrc-system-response--list.c-iTxaCK {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  overflow-anchor: none;
+  width: calc(100% + 25px) !important;
+  max-width: calc(100% + 25px) !important;
+  box-sizing: border-box;
+  padding-right: 20px !important;
+  margin-right: 0 !important;
+}
+
+/* Control message appearance and positioning */
 .vfrc-message.c-gMpNkY.vfrc-message--chat.c-PJLV.c-PJLV-jueArD-from-system {
   width: calc(100% + 25px) !important;
   max-width: calc(100% + 25px) !important;
@@ -68,19 +82,20 @@
   padding-right: 20px !important;
   margin-right: 0 !important;
   scroll-margin-top: 20px;
-  animation: slideInAndScroll 0.4s ease-out forwards;
+  animation: messageAppear 0.4s ease-out forwards;
+  position: relative;
   transform-origin: top;
 }
 
-@keyframes slideInAndScroll {
+/* New animation that shows message from top */
+@keyframes messageAppear {
   0% {
     opacity: 0;
-    transform: translateY(16px);
+    transform: translateY(-20px);
   }
   100% {
     opacity: 1;
     transform: translateY(0);
-    scroll-margin-top: 20px;
   }
 }
 
@@ -345,12 +360,14 @@ textarea#vf-chat-input--cm50wq9jx0001356rbFr26w1p {
   height: 100%;
 }
 
-/* Message container wrapper adjustments */
+/* Message container wrapper with fixed scroll behavior */
 .c-kDxFae > .c-iBVlvN {
   padding: 0 20px 0 60px !important;
   width: 100% !important;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  overflow-anchor: none;
 }
 
 /* Performance optimization for reduced motion */
