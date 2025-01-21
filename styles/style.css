@@ -2,8 +2,19 @@
   box-shadow: #000000;
 }
 
+/* Widget level control */
+.vfrc-widget.c-ljFKFj {
+  scroll-padding-top: 20px !important;
+  scroll-behavior: smooth !important;
+  overflow-anchor: none !important;
+}
+
 .vfrc-widget--chat.c-jmjhPs {
   animation: fadeInChat 1s ease-out;
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: smooth !important;
+  overflow-anchor: none !important;
 }
 
 .vfrc-assistant-info--title.c-kfyIxT {
@@ -54,24 +65,25 @@
   color: rgba(0, 0, 0, 0.85);
   position: relative;
   direction: ltr;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
   display: flex;
   flex-direction: column;
-  overflow-anchor: none; /* Prevent browser auto-scroll */
+  overflow-anchor: none !important;
 }
 
-/* Ensure messages start from top */
+/* Ensure messages start from top with updated scroll behavior */
 .vfrc-system-response--list.c-iTxaCK {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 100%;
-  overflow-anchor: none;
   width: calc(100% + 25px) !important;
   max-width: calc(100% + 25px) !important;
   box-sizing: border-box;
   padding-right: 20px !important;
   margin-right: 0 !important;
+  scroll-margin-block-start: 20px !important;
+  scroll-snap-align: start !important;
+  overflow-anchor: none !important;
 }
 
 /* Control message appearance and positioning */
@@ -81,14 +93,15 @@
   box-sizing: border-box;
   padding-right: 20px !important;
   margin-right: 0 !important;
-  scroll-margin-top: 20px;
-  animation: messageAppear 0.4s ease-out forwards;
+  scroll-margin-block-start: 20px !important;
+  scroll-snap-align: start !important;
+  animation: messageReveal 0.4s ease-out forwards;
   position: relative;
   transform-origin: top;
 }
 
-/* New animation that shows message from top */
-@keyframes messageAppear {
+/* New animation that reveals message from top */
+@keyframes messageReveal {
   0% {
     opacity: 0;
     transform: translateY(-20px);
@@ -367,7 +380,8 @@ textarea#vf-chat-input--cm50wq9jx0001356rbFr26w1p {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  overflow-anchor: none;
+  overflow-anchor: none !important;
+  scroll-snap-align: start !important;
 }
 
 /* Performance optimization for reduced motion */
@@ -375,6 +389,14 @@ textarea#vf-chat-input--cm50wq9jx0001356rbFr26w1p {
   .vfrc-system-response--list.c-iTxaCK,
   .vfrc-message.c-gMpNkY.vfrc-message--chat.c-PJLV.c-PJLV-jueArD-from-system {
     animation-duration: 0.1s;
+  }
+}
+
+/* Safari-specific optimizations */
+@supports (-webkit-overflow-scrolling: touch) {
+  .vfrc-widget--chat.c-jmjhPs,
+  .vfrc-chat-dialog.c-kDxFae {
+    -webkit-overflow-scrolling: touch;
   }
 }
 
