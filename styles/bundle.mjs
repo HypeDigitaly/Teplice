@@ -29624,7 +29624,7 @@
   }
   var $e = h0();
   const ju = pa($e),
-    Zx = $e.createContext({ scrollToTop: () => {} }),
+    Zx = $e.createContext({ scrollToBottom: () => {} }),
     H8 = ({ target: e, children: t }) => {
       const n = $e.useCallback(() => {
           requestAnimationFrame(() => {
@@ -29632,10 +29632,10 @@
             if (!l) return;
             const { scrollTop: c, scrollHeight: h, clientHeight: d } = l,
               g = h - d;
-            g !== c && l.scrollTo({ top: 0 });
+            g !== c && l.scrollTo({ top: g });
           });
         }, []),
-        i = $e.useMemo(() => ({ scrollToTop: n }), [n]);
+        i = $e.useMemo(() => ({ scrollToBottom: n }), [n]);
       return Pe.jsx(Zx.Provider, { value: i, children: t });
     };
   var Tr;
@@ -53052,7 +53052,7 @@
       };
     },
     W3 = (e = []) => {
-      const { scrollToTop: t } = $e.useContext(Zx);
+      const { scrollToBottom: t } = $e.useContext(Zx);
       $e.useLayoutEffect(() => {
         t();
       }, e);
@@ -54050,7 +54050,7 @@
       const n = e == null ? void 0 : e.current;
       if (!n) return;
       const i = t(n);
-      n.scrollTo({ top: 0, behavior: "smooth" });
+      n.scrollTo({ left: i && i * eE - 200, behavior: "smooth" });
     },
     dX = (e, t, n) => {
       const [i, l] = $e.useState(!1),
