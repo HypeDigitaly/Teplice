@@ -29635,7 +29635,7 @@
             g !== c && l.scrollTo({ top: 0 });
           });
         }, []),
-        i = $e.useMemo(() => ({ scrollToBottom: n }), [n]);
+        i = $e.useMemo(() => ({ scrollToTop: n }), [n]);
       return Pe.jsx(Zx.Provider, { value: i, children: t });
     };
   var Tr;
