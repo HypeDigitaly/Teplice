@@ -46,7 +46,20 @@
   object-fit: cover !important;
 }
 
-/* Updated message container width for system messages */
+/* Updated chat dialog container with new scroll behavior */
+.vfrc-chat-dialog.c-kDxFae {
+  flex: 1 1 0px;
+  overflow-y: auto;
+  min-height: 0px;
+  color: rgba(0, 0, 0, 0.85);
+  position: relative;
+  direction: ltr;
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Updated message container with new scroll and animation behavior */
 .vfrc-system-response--list.c-iTxaCK,
 .vfrc-message.c-gMpNkY.vfrc-message--chat.c-PJLV.c-PJLV-jueArD-from-system {
   width: calc(100% + 25px) !important;
@@ -54,9 +67,24 @@
   box-sizing: border-box;
   padding-right: 20px !important;
   margin-right: 0 !important;
+  scroll-margin-top: 20px;
+  animation: slideInAndScroll 0.4s ease-out forwards;
+  transform-origin: top;
 }
 
-/* Updated user message styling to fit content */
+@keyframes slideInAndScroll {
+  0% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    scroll-margin-top: 20px;
+  }
+}
+
+/* Updated user message styling */
 .c-PJLV-gJqBfM-from-user {
   background-color: #FDCA40;
   color: #ffffff;
@@ -79,6 +107,10 @@
   align-items: center;
   justify-content: space-between;
   position: relative;
+  background-color: #FDCA40;
+  height: 66px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .vfrc-header.c-iCDrnV .vfrc-avatar {
@@ -104,20 +136,10 @@
   transition: all 100ms ease 0s;
 }
 
-.vfrc-chat-dialog.c-kDxFae {
-  flex: 1 1 0px;
-  overflow: hidden;
-  min-height: 0px;
-  color: rgba(0, 0, 0, 0.85);
-  position: relative;
-  direction: ltr;
-  opacity: 0;
-  transform: translateY(16px);
-  animation: 400ms ease-out 150ms 1 normal forwards running cxARAE;
-}
-
 .c-fYYkXN {
   border: 1px solid #ccc;
+  border-top-left-radius: 20px !important;
+  border-bottom-left-radius: 20px !important;
 }
 
 .vfrc-assistant-info--description {
@@ -137,12 +159,6 @@
   border-radius: 20px;
 }
 
-.c-fYYkXN {
-  border-top-left-radius: 20px !important;
-  border-bottom-left-radius: 20px !important;
-  border: 1px solid #ccc;
-}
-
 .vfrc-chat-input--button {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -150,7 +166,7 @@
   margin-left: -1px;
 }
 
-/* Updated button styles with fit-content and proper wrapping */
+/* Updated button styles */
 .vfrc-button--secondary {
   display: inline-block !important;
   width: fit-content !important;
@@ -204,16 +220,6 @@
   font-size: 16px;
 }
 
-.vfrc-launcher.c-bQoszf img {
-  width: 72px;
-  height: 72px;
-  border-radius: 40px;
-}
-
-.vfrc-proactive-message.c-fbwYwp {
-  font-weight: 700;
-}
-
 .vfrc-launcher.c-bQoszf {
   width: 80px;
   height: 80px;
@@ -224,10 +230,20 @@
   box-shadow: #000000;
 }
 
+.vfrc-launcher.c-bQoszf img {
+  width: 72px;
+  height: 72px;
+  border-radius: 40px;
+}
+
 .vfrc-launcher.c-bQoszf:hover {
   transform: scale(1.1);
   opacity: 0.8;
   background-color: white;
+}
+
+.vfrc-proactive-message.c-fbwYwp {
+  font-weight: 700;
 }
 
 @keyframes fadeIn {
@@ -241,18 +257,10 @@
   }
 }
 
-.vfrc-header--button:nth-of-type(1) .vfrc-icon {
-  width: 24px !important;
-  height: 24px !important;
-}
-
+.vfrc-header--button:nth-of-type(1) .vfrc-icon,
 .vfrc-header--button:nth-of-type(2) .vfrc-icon {
   width: 24px !important;
   height: 24px !important;
-}
-
-.vfrc-launcher.c-bQoszf:hover {
-  background-color: none;
 }
 
 /* Footer watermark styles */
@@ -267,32 +275,16 @@
   color: #FDCA40 !important;
 }
 
-.c-cejRNw * {
-  color: #FDCA40 !important;
-  font-weight: 700 !important;
-}
-
-.c-cejRNw a {
-  color: #FDCA40 !important;
-  font-weight: 700 !important;
-  text-decoration: none;
-}
-
-.vfrc-footer--watermark {
-  color: #FDCA40 !important;
-  font-weight: 700 !important;
-}
-
+.c-cejRNw *,
+.c-cejRNw a,
+.vfrc-footer--watermark,
 .vfrc-footer--watermark * {
   color: #FDCA40 !important;
   font-weight: 700 !important;
 }
 
-.vfrc-header.c-iCDrnV {
-  background-color: #FDCA40;
-  height: 66px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+.c-cejRNw a {
+  text-decoration: none;
 }
 
 .vfrc-assistant-info--title {
@@ -359,6 +351,14 @@ textarea#vf-chat-input--cm50wq9jx0001356rbFr26w1p {
   width: 100% !important;
   display: flex;
   flex-direction: column;
+}
+
+/* Performance optimization for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .vfrc-system-response--list.c-iTxaCK,
+  .vfrc-message.c-gMpNkY.vfrc-message--chat.c-PJLV.c-PJLV-jueArD-from-system {
+    animation-duration: 0.1s;
+  }
 }
 
 /* Desktop styles for larger widget */
