@@ -185,6 +185,7 @@
 .vfrc-message {
   font-weight: 400;
   border-radius: 20px;
+  text-align: left !important;
 }
 
 .vfrc-chat-input--button {
@@ -246,6 +247,7 @@
 .vfrc-header--title.c-kfyIxT {
   color: #fffffffa;
   font-size: 16px;
+  text-align: left !important;
 }
 
 .vfrc-launcher.c-bQoszf {
@@ -272,6 +274,7 @@
 
 .vfrc-proactive-message.c-fbwYwp {
   font-weight: 700;
+  text-align: left !important;
 }
 
 @keyframes fadeIn {
