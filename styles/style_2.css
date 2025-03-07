@@ -10,8 +10,9 @@
     height: 84px !important;
     transition: none !important;
     animation: none !important;
-    background-color: transparent !important;
-    border: none !important;
+    background-color: #FDCA40 !important;
+    border: 2px solid black !important;
+    border-radius: 42px !important;
   }
   
   /* Target both SVG and IMG when in closed state */
