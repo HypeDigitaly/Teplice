@@ -392,7 +392,8 @@ div._6r9xee3.o231sh1 {
   position: relative !important;
   z-index: 0 !important;
   border-radius: 10px !important;
-  background-color: #001D99 !important;
+  background-color: white !important;
+  border: 2px solid #001D99 !important;
   color: #1a1e23 !important;
   opacity: 1 !important;
 
