@@ -1,413 +1,457 @@
-.voiceflow-chat {
-  box-shadow: #000000;
-}
-
-/* Widget level control */
-.vfrc-widget.c-ljFKFj {
-  scroll-padding-top: 20px !important;
-  scroll-behavior: smooth !important;
-  overflow-anchor: none !important;
-}
-
-.vfrc-widget--chat.c-jmjhPs {
-  animation: fadeInChat 1s ease-out;
-  display: flex;
-  flex-direction: column;
-  scroll-behavior: smooth !important;
-  overflow-anchor: none !important;
-}
-
-.vfrc-assistant-info--title.c-kfyIxT {
-  font-size: 20px;
-}
-
-.vfrc-assistant-info--description {
-  color: rgb(17, 24, 28);
-}
-
-.vfrc-icon.c-dhzjXW {
-  width: 24px;
-  height: 24px;
-}
-
-.c-kIbiaN-iiTsXc-size-large {
-  width: 72px;
-  height: 72px;
-  background-color: #FDCA40;
-  border: #000000 1px solid;
-}
-
-/* Updated header avatar size */
-.c-iCDrnV .c-kIbiaN {
-  width: 48px;
-  height: 48px;
-  background-color: #ed143d00;
-}
-
-/* Avatar image size */
-.vfrc-avatar.c-kIbiaN img {
-  width: 90px !important;
-  height: 90px !important;
-  object-fit: cover !important;
-}
-
-.c-kIbiaN-iiTsXc-size-small.c-kIbiaN-ijxdCMB-css img {
-  width: 90px !important;
-  height: 90px !important;
-  object-fit: cover !important;
-}
-
-/* Updated chat dialog container with fixed scroll behavior */
-.vfrc-chat-dialog.c-kDxFae {
-  flex: 1 1 0px;
-  overflow-y: auto;
-  min-height: 0px;
-  color: rgba(0, 0, 0, 0.85);
-  position: relative;
-  direction: ltr;
-  scroll-behavior: smooth !important;
-  display: flex;
-  flex-direction: column;
-  overflow-anchor: none !important;
-}
-
-/* Ensure messages start from top with updated scroll behavior */
-.vfrc-system-response--list.c-iTxaCK {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: calc(100% + 25px) !important;
-  max-width: calc(100% + 25px) !important;
-  box-sizing: border-box;
-  padding-right: 20px !important;
-  margin-right: 0 !important;
-  scroll-margin-block-start: 20px !important;
-  scroll-snap-align: start !important;
-  overflow-anchor: none !important;
-}
-
-/* Control message appearance and positioning */
-.vfrc-message.c-gMpNkY.vfrc-message--chat.c-PJLV.c-PJLV-jueArD-from-system {
-  width: calc(100% + 25px) !important;
-  max-width: calc(100% + 25px) !important;
-  box-sizing: border-box;
-  padding-right: 20px !important;
-  margin-right: 0 !important;
-  scroll-margin-block-start: 20px !important;
-  scroll-snap-align: start !important;
-  animation: messageReveal 0.4s ease-out forwards;
-  position: relative;
-  transform-origin: top;
-}
-
-/* New animation that reveals message from top */
-@keyframes messageReveal {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Updated user message styling */
-.c-PJLV-gJqBfM-from-user {
-  background-color: #FDCA40;
-  color: #ffffff;
-  text-align: left !important;
+/* ================= RESET ALL BUTTON CONTAINERS FIRST ================= */
+/* Reset all button containers to remove potentially problematic default styling */
+.vfrc-button._1q15b0b0.c26d8x0._1q15b0b2.vfrc-launcher.f6dof81._1q15b0b0.c26d8x0._1q15b0b5,
+button.vfrc-button._1q15b0b0.c26d8x0._1q15b0b2.vfrc-launcher.f6dof81._1q15b0b0.c26d8x0._1q15b0b5,
+.vfrc-launcher,
+.f6dof81,
+.f6dof87.f6dof89,
+.f6dof86.f6dof88,
+div.f6dof87.f6dof89,
+div.f6dof8m.f6dof8o.f6dof8r.f6dof8f,
+div.f6dof87.f6dof89 {
   width: auto !important;
-  max-width: 80% !important;
-  display: inline-block !important;
-  align-self: flex-start;
+  height: auto !important;
+  min-width: auto !important;
+  min-height: auto !important;
+  max-width: none !important;
+  max-height: none !important;
 }
 
-/* Container adjustments for user messages */
-.vfrc-message.c-gMpNkY.vfrc-message--chat.c-PJLV.c-PJLV-gJqBfM-from-user {
-  width: auto !important;
-  max-width: 80% !important;
-  display: inline-block !important;
+/* ================= MAIN CONTAINER STYLING (APPLIES TO BOTH STATES) ================= */
+/* Main container positioning */
+._1emja3f9 {
+  position: fixed !important;
+  z-index: 9999 !important;
 }
 
-.vfrc-header.c-iCDrnV {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-  background-color: #FDCA40;
-  height: 66px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+/* CLOSED STATE - specific positioning */
+._1emja3f9:has(img[alt="open chat"]),
+._1emja3f9:not(:has(#voiceflow-chat)) {
+  bottom: 15px !important;
+  right: 15px !important;
 }
 
-.vfrc-header.c-iCDrnV .vfrc-avatar {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  margin-right: 10px;
+/* OPENED STATE - specific positioning */
+._1emja3f9:has(#voiceflow-chat) {
+  bottom: 0 !important;
+  right: 0 !important;
 }
-
-.c-iCDrnV .c-kfyIxT {
-  margin: 0px 0px 0px 40px;
-}
-
-.c-dzcdPv .vfrc-header--button {
-  border: none;
-  padding: 0px;
-  cursor: pointer;
-  color: rgba(0, 0, 0, 0.6);
-  border-radius: 8px;
-  height: 32px;
-  width: 32px;
-  transition: all 100ms ease 0s;
-}
-
-.c-fYYkXN {
-  border: 1px solid #ccc;
-  border-top-left-radius: 20px !important;
-  border-bottom-left-radius: 20px !important;
-}
-
-.vfrc-assistant-info--description {
-  -webkit-box-orient: horizontal;
-}
-
-.c-bXTvXv-lckiv-type-info {
-  background-color: #FDCA40;
-}
-
-.c-bXTvXv-lckiv-type-info:hover {
-  background-color: #FDCA40;
-}
-
-.vfrc-message {
-  font-weight: 400;
-  border-radius: 20px;
-  text-align: left !important;
-}
-
-.vfrc-chat-input--button {
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  border: 1px solid #ccc;
-  margin-left: -1px;
-}
-
-/* Updated button styles */
-.vfrc-button--secondary {
-  display: inline-block !important;
-  width: fit-content !important;
-  max-width: calc(100% - 20px) !important;
-  border: 1px solid #FDCA40;
-  font-size: 13px;
-  font-weight: 500;
-  border-radius: 20px;
-  padding: 9px 13px;
-  margin: 0px;
-  margin-bottom: 2px !important;
+ 
+/* ================= CLOSED STATE STYLING ================= */
+/* Parent containers in closed state */
+.vfrc-button._1q15b0b0.c26d8x0._1q15b0b2.vfrc-launcher.f6dof81._1q15b0b0.c26d8x0._1q15b0b5:has(img[alt="open chat"]),
+.vfrc-button._1q15b0b0.c26d8x0._1q15b0b2.vfrc-launcher.f6dof81._1q15b0b0.c26d8x0._1q15b0b5:has(.f6dof8u.f6dof8w.f6dof8h) {
+  width: 100px !important;
+  height: 100px !important;
+  min-width: 100px !important;
+  min-height: 100px !important;
+  max-width: 100px !important;
+  max-height: 100px !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  margin: 0 !important;
   box-sizing: border-box !important;
-  background-color: transparent;
-  color: #002b45;
-  cursor: pointer;
-  transition: background-color 50ms ease-in-out 0s,
-    border-color 100ms ease-in-out 0s;
-  white-space: normal !important;
-  text-align: left;
-  float: none !important;
-  clear: both !important;
-  word-wrap: break-word !important;
-  overflow-wrap: break-word !important;
-  min-width: 0 !important;
+  transform: none !important;
+  position: fixed !important;
+  bottom: 15px !important;
+  right: 15px !important;
 }
 
-.vfrc-button--secondary:hover {
-  background-color: #add8e6;
-  border-color: rgba(0, 43, 69, 0.7);
+/* Additional selectors for parent container in closed state */
+div.f6dof80:has(img[alt="open chat"]) {
+  width: 100px !important;
+  height: 100px !important;
+  min-width: 100px !important;
+  min-height: 100px !important;
+  max-width: 100px !important;
+  max-height: 100px !important;
 }
 
-/* Actions container for vertical layout */
-.vfrc-system-response--actions.c-iBV1vN,
-.vfrc-system-response--actions {
-  padding-left: 60px !important;
-  padding-right: 60px !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
+/* Immediate image container in closed state */
+.vfrc-button._1q15b0b0.c26d8x0._1q15b0b2.vfrc-launcher.f6dof81._1q15b0b0.c26d8x0._1q15b0b5:has(img[alt="open chat"]) div.f6dof87.f6dof89,
+.vfrc-button._1q15b0b0.c26d8x0._1q15b0b2.vfrc-launcher.f6dof81._1q15b0b0.c26d8x0._1q15b0b5:has(img[alt="open chat"]) div.f6dof86.f6dof88 {
+  width: 100px !important;
+  height: 100px !important;
+  min-width: 100px !important;
+  min-height: 100px !important;
+  max-width: 100px !important;
+  max-height: 100px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Target the actual image in closed state */
+.vfrc-button._1q15b0b0.c26d8x0._1q15b0b2.vfrc-launcher.f6dof81._1q15b0b0.c26d8x0._1q15b0b5 img.f6dof8u.f6dof8w.f6dof8h,
+.vfrc-button._1q15b0b0.c26d8x0._1q15b0b2.vfrc-launcher.f6dof81._1q15b0b0.c26d8x0._1q15b0b5 img[alt="open chat"] {
+  width: 100px !important;
+  height: 100px !important;
+  min-width: 100px !important;
+  min-height: 100px !important;
+  max-width: 100px !important;
+  max-height: 100px !important;
+  border-radius: 50% !important;
+  background-color: transparent !important;
+  border: none !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+  transform: none !important;
+  aspect-ratio: 1/1 !important;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out !important;
+}
+
+/* Enlarge image on hover */
+.vfrc-button._1q15b0b0.c26d8x0._1q15b0b2.vfrc-launcher.f6dof81._1q15b0b0.c26d8x0._1q15b0b5:hover img.f6dof8u.f6dof8w.f6dof8h,
+.vfrc-button._1q15b0b0.c26d8x0._1q15b0b2.vfrc-launcher.f6dof81._1q15b0b0.c26d8x0._1q15b0b5:hover img[alt="open chat"] {
+  transform: scale(1.1) !important;
+}
+
+/* Keyframes for the image glow pulse */
+/* @keyframes pulseImageGlow { ... } */ /* Commented out as animation is removed */
+
+/* ================= OPENED STATE STYLING ================= */
+/* Main container in opened state */
+div._1emja3f9:has(#voiceflow-chat) {
   display: flex !important;
   flex-direction: column !important;
-  gap: 0px !important;
-  align-items: stretch !important;
-  width: auto !important;
-  max-width: 100% !important;
-  flex-wrap: nowrap !important;
-  box-sizing: border-box !important;
+  align-items: flex-end !important;
 }
 
-.vfrc-header--title.c-kfyIxT {
-  color: #fffffffa;
-  font-size: 16px;
+/* Button in opened state - INCREASED SIZE TO 42x42 FROM 36x36 */
+button.vfrc-button._1q15b0b0.c26d8x0._1q15b0b2.vfrc-launcher.f6dof81._1q15b0b0.c26d8x0._1q15b0b5:has(svg[viewBox="0 0 32 32"]) {
+  width: 42px !important;
+  height: 42px !important;
+  min-width: 42px !important;
+  min-height: 42px !important;
+  max-width: 42px !important;
+  max-height: 42px !important;
+  background-color: #002F88 !important;
+  border-radius: 9999px !important;
+  overflow: hidden !important;
+  transform: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-top: 15px !important;
+  margin-right: 15px !important;
+  margin-bottom: 15px !important;
+  position: relative !important; /* Override fixed position from the default */
+  bottom: auto !important; /* Override bottom from the default */
+  right: auto !important; /* Override right from the default */
+  border: none !important;
+}
+
+/* Additional selectors for parent container in opened state */
+div.f6dof80:has(svg[viewBox="0 0 32 32"]) {
+  width: 42px !important;
+  height: 42px !important;
+  min-width: 42px !important;
+  min-height: 42px !important;
+  max-width: 42px !important;
+  max-height: 42px !important;
+}
+
+/* Container for svg in opened state */
+button.vfrc-button._1q15b0b0.c26d8x0._1q15b0b2.vfrc-launcher.f6dof81._1q15b0b0.c26d8x0._1q15b0b5:has(svg[viewBox="0 0 32 32"]) div.f6dof87.f6dof89 {
+  width: 42px !important;
+  height: 42px !important;
+  min-width: 42px !important;
+  min-height: 42px !important;
+  max-width: 42px !important;
+  max-height: 42px !important;
+}
+
+/* Arrow icon in opened state - INCREASED PROPORTIONALLY */
+button.vfrc-button._1q15b0b0.c26d8x0._1q15b0b2.vfrc-launcher.f6dof81._1q15b0b0.c26d8x0._1q15b0b5:has(svg[viewBox="0 0 32 32"]) svg {
+  width: 21px !important;
+  height: 21px !important;
+  transform: none !important;
+  object-fit: contain !important;
+}
+
+/* ================= BUTTON TEXT REPLACEMENT ================= */
+/* Replace "Open chat agent" with "Otevřít chatbot" */
+button[title="Open chat agent"] {
+  color: transparent !important;
+  position: relative !important;
+}
+
+button[title="Open chat agent"]::before {
+  content: "Otevřít chatbot" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+}
+
+/* Replace "Close chat agent" with "Zavřít chatbot" */
+button[title="Close chat agent"] {
+  color: transparent !important;
+  position: relative !important;
+}
+
+button[title="Close chat agent"]::before {
+  content: "Zavřít chatbot" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+}
+
+/* ================= OTHER STYLING ================= */
+/* Translation overlay styles - updated approach */
+/* Remove backgrounds and hide original text */
+.vfrc-button_lytjiy0_l7qb7gk0_lytjiv2_lytjiv4,
+button[label="Start new chat"],
+button[label="Cancel"],
+#vfrc-start-chat {
+  background: transparent !important;
+  border: none !important;
+  color: transparent !important;
+  position: relative !important;
+}
+
+/* Hide all original text contents */
+.vfrc-button_lytjiy0_l7qb7gk0_lytjiv2_lytjiv4 span,
+button[label="Start new chat"] span,
+button[label="Cancel"] span,
+#vfrc-start-chat span {
+  display: none !important;
+}
+
+/* Start new chat translation - all variations */
+button[label="Start new chat"],
+#vfrc-start-chat {
+  background-color: #002F88 !important;
+  border-radius: 4px !important;
+  padding: 10px 20px !important;
+}
+
+button[label="Start new chat"]::before,
+#vfrc-start-chat::before {
+  content: "Začít nový chat" !important;
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  color: white !important;
+  white-space: nowrap !important;
+  pointer-events: none !important;
+  z-index: 2 !important;
+  font-family: Arial, sans-serif !important;
+  font-size: 16px !important;
+}
+
+/* Cancel translation */
+button[label="Cancel"] {
+  background-color: #002F88 !important;
+  border-radius: 4px !important;
+  padding: 10px 20px !important;
+}
+
+button[label="Cancel"]::before {
+  content: "Zavřít" !important;
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  color: white !important;
+  white-space: nowrap !important;
+  pointer-events: none !important;
+  z-index: 2 !important;
+  font-family: Arial, sans-serif !important;
+  font-size: 16px !important;
+}
+
+/* Message text alignment */
+.vfrc-message {
+  text-align: left !important;
+  justify-content: flex-start !important;
+}
+
+/* Ensure message content is also left-aligned */
+.vfrc-message > * {
+  text-align: left !important;
+  margin-left: 0 !important;
+}
+
+/* In case there are any flex containers within the message */
+.vfrc-message div {
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+}
+
+/* Aggressive translation targeting for "Chat has ended" text */
+.t1cwqp2,
+div.t1cwqp2,
+.t1cwqp1,
+div.t1cwqp1,
+div[class^="t1cwqp"],
+div[class*="t1cwqp"] {
+    color: transparent !important;
+    font-size: 0 !important;
+    visibility: hidden !important;
+    position: relative !important;
+    display: block !important;
+    height: 30px !important;
+    width: 100% !important;
+    margin: 8px 0 !important;
+}
+
+/* Target any potential child elements */
+.t1cwqp2 *,
+div.t1cwqp2 *,
+.t1cwqp1 *,
+div.t1cwqp1 *,
+div[class^="t1cwqp"] *,
+div[class*="t1cwqp"] * {
+    color: transparent !important;
+    font-size: 0 !important;
+    visibility: hidden !important;
+}
+
+/* Insert translated text */
+.t1cwqp2::after,
+div.t1cwqp2::after,
+.t1cwqp1::after,
+div.t1cwqp1::after,
+div[class^="t1cwqp"]::after,
+div[class*="t1cwqp"]::after {
+    content: "Chat byl ukončen" !important;
+    visibility: visible !important;
+    color: #5F7CA0 !important;
+    font-family: "Open Sans", Arial, sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    line-height: 1.5 !important;
+    text-align: center !important;
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 100% !important;
+    display: block !important;
+}
+
+/* Remove all previous translation attempts */
+div[class*="t1cwqp"]::before,
+div:has(> span:only-child:contains("Chat has ended"))::before,
+div[class*="t1cwqp"] > span,
+div[class*="t1cwqp"] > div {
+    display: none !important;
+}
+
+/* ADDED TEXT ALIGNMENT FIX */
+/* For all chat message containers */
+.vfrc-message,
+div[class*="vfrc-chat-dialog"],
+div[class*="knxm730"],
+div[class*="_15emaa"],
+div[class*="vfrc-user-response"],
+div[class*="vfrc-system-response"],
+div[class*="g3dqfd"],
+div[class*="response-content"],
+div[class*="streaming-response-container"] {
   text-align: left !important;
 }
 
-.vfrc-launcher.c-bQoszf {
-  width: 80px;
-  height: 80px;
-  background-color: #FDCA40;
-  border: #000000 4px solid;
-  animation: fadeIn 0.5s ease-in-out;
-  transition: transform 150ms ease 0s, opacity 150ms ease 0s !important;
-  box-shadow: #000000;
-}
-
-.vfrc-launcher.c-bQoszf img {
-  width: 72px;
-  height: 72px;
-  border-radius: 40px;
-}
-
-.vfrc-launcher.c-bQoszf:hover {
-  transform: scale(1.1);
-  opacity: 0.8;
-  background-color: white;
-}
-
-.vfrc-proactive-message.c-fbwYwp {
-  font-weight: 700;
+/* For text elements */
+.vfrc-message span,
+.vfrc-message p,
+div[class*="vfrc-message"] * {
   text-align: left !important;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* ================= PROACTIVE MESSAGE STYLING ================= */
+/* Adjust vertical position of the proactive message container */
+/* The original 'bottom: 100%' positions the bottom edge of this container
+   at the top edge of its parent. Adding margin-bottom pushes it further up. */
+._6r9xee0 {
+  margin-bottom: 60px !important; /* Move upwards by 50px */
 }
 
-.vfrc-header--button:nth-of-type(1) .vfrc-icon,
-.vfrc-header--button:nth-of-type(2) .vfrc-icon {
-  width: 24px !important;
-  height: 24px !important;
+/* Style the inner proactive message div for the animated border */
+div._6r9xee3.o231sh1 {
+  position: relative !important;
+  z-index: 0 !important;
+  border-radius: 10px !important;
+  background-color: #FFFFFF !important;
+  color: #002F88 !important;
+  border: 2px solid #002F88 !important;
+  opacity: 1 !important;
+
+  /* Restore ONLY scale pulse animation */
+  /* animation: pulseScale 1.8s ease-in-out infinite !important; */
+  transform-origin: center center !important;
 }
 
-/* Footer watermark styles */
-.c-cejRNw {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 0 var(--space-3) 0;
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 17px;
-  color: #FDCA40 !important;
+/* Restore Keyframes for the pulsing scale */
+/* @keyframes pulseScale { ... } */
+
+/* REMOVE Keyframes for pulsing background color */
+/* @keyframes pulseColor { ... } */
+
+/* Ensure text inside is visible above the background color */
+div._6r9xee3.o231sh1 > * {
+    position: relative;
+    z-index: 1;
 }
 
-.c-cejRNw *,
-.c-cejRNw a,
-.vfrc-footer--watermark,
-.vfrc-footer--watermark * {
-  color: #FDCA40 !important;
-  font-weight: 700 !important;
+/* ================= HEADER STYLING ================= */
+.vfrc-header,
+div[class*="vfrc-header"] {
+  background-color: #FFFFFF !important;
 }
 
-.c-cejRNw a {
-  text-decoration: none;
+/* ================= CHATBOT AVATAR IMAGE STYLING ================= */
+img.vfrc-image {
+  width: 150px !important;
+  height: 150px !important;
+  padding: 0 !important;
+  margin-left: 55px !important;
+  border-radius: 10px !important;
+  object-fit: cover !important;
 }
 
-.vfrc-assistant-info--title {
-  color: #000000;
+/* ================= ICON COLOR STYLING ================= */
+.vfrc-icon {
+  color: #002F88 !important;
 }
 
-.c-bXTvXv-igaDqE-type-subtle {
-  background-color: #FDCA40;
-  color: #ffffff;
+/* ================= HEADER USER AVATAR STYLING (Královéhradecký kraj logo) ================= */
+/* Targets the avatar image within any element having "vfrc-header" in its class */
+div[class*="vfrc-header"] img.vfrc-avatar {
+  width: 180.84px !important; /* Calculated to maintain aspect ratio with a 56px height */
+  height: 56px !important;    /* Set to fit the header's height */
+  border-radius: 0 !important; /* Ensures the image is rectangular, not circular */
+  object-fit: contain !important; /* Ensures the entire image is visible and maintains aspect ratio within the defined dimensions */
+  background-color: transparent !important; /* Removes any default background color from other rules */
+  background-image: none !important; /* Removes any default background image */
+  padding: 0 !important; /* Resets padding */
+  margin: 2px 0 0 0px !important;  /* Updated: 2px top, 0 right, 0 bottom, 10px left margin (shifted 25px right from -15px) */
 }
 
-.c-bXTvXv-igaDqE-type-subtle:hover {
-  color: #ffffff;
+.vfrc-header + div {
+    scrollbar-width: auto;
 }
 
-.vfrc-proactive-message {
-  border: black 1px solid;
-}
-
-.vfrc-chat-input textarea,
-.vfrc-chat-input--button {
-  color: #000000;
-}
-
-.vfrc-widget--launcher.c-PJLV {
-  bottom: 30px;
-  right: 30px;
-}
-
-.vfrc-proactive.c-dgCmtz {
-  right: 0px;
-  align-items: end;
-}
-
-.vfrc-chat-input.c-dNrVYs {
-  display: flex;
-  align-items: center;
-  padding: var(--space-3);
-}
-
-textarea#vf-chat-input--cm50wq9jx0001356rbFr26w1p {
-  height: 29px !important;
-}
-
-.vfrc-proactive-close.c-fMtpfM {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-}
-
-.vfrc-proactive-close.c-fMtpfM .vfrc-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-}
-
-/* Message container wrapper with fixed scroll behavior */
-.c-kDxFae > .c-iBVlvN {
-  padding: 0 20px 0 60px !important;
-  width: 100% !important;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  overflow-anchor: none !important;
-  scroll-snap-align: start !important;
-}
-
-/* Performance optimization for reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  .vfrc-system-response--list.c-iTxaCK,
-  .vfrc-message.c-gMpNkY.vfrc-message--chat.c-PJLV.c-PJLV-jueArD-from-system {
-    animation-duration: 0.1s;
-  }
-}
-
-/* Safari-specific optimizations */
-@supports (-webkit-overflow-scrolling: touch) {
-  .vfrc-widget--chat.c-jmjhPs,
-  .vfrc-chat-dialog.c-kDxFae {
-    -webkit-overflow-scrolling: touch;
-  }
-}
-
-/* Desktop styles for larger widget */
-@media screen and (min-width: 768px) {
-  .vfrc-widget--chat {
-    border-radius: 20px;
-    height: 85vh !important;
-    max-height: 900px !important;
-  }
+.vfrc-header .vfrc-icon {
+  color: #002F88 !important;
+  fill: #002F88 !important;
 }
